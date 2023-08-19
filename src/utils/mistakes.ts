@@ -2,7 +2,7 @@ import { Faker } from '@faker-js/faker';
 
 const mistakesFunctions = {
     removeCharacter: (str: string, faker: Faker) => {
-        if(str.length < 2) return str
+        if (str.length < 2) return str
         const index = faker.number.int({ max: str.length - 1 });
         return str.slice(0, index) + str.slice(index + 1);
     },
@@ -12,7 +12,7 @@ const mistakesFunctions = {
         return str.slice(0, index) + randomChar + str.slice(index);
     },
     swapCharactes: (str: string, faker: Faker) => {
-        if(str.length < 2) return str
+        if (str.length < 2) return str
         const firstCharIndex = faker.number.int({ max: str.length - 1 });
         const secondCharIndex = firstCharIndex + 1;
         const swaped = str[secondCharIndex] + str[firstCharIndex];
